@@ -56,7 +56,7 @@
 
 * [HTB](exercicios/htb/README.md)
   * [Challenges](exercicios/htb/challenges/README.md)
-    * [CubeMadness1ament](exercicios/htb/challenges/cubemadness1ament.md)
+    * [CubeMadness1](exercicios/htb/challenges/cubemadness1.md)
   * [Reversing](exercicios/htb/reversing/README.md)
     * [Behind the Scenes](exercicios/htb/reversing/behind-the-scenes.md)
 * [Pentest](exercicios/pentest.md)
