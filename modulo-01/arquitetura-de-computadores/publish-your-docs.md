@@ -17,6 +17,10 @@ icon: layer-group
 
 ### 2 Layout de um Stack Frame (System V AMD64)
 
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+Stack Frame (Pilha) nada mais é do que partes da memória separadas pra cada função, com seus argumentos e variáveis.
+
 ```
               ↑ Endereços altos
 ┌─────────────┐  ← RBP (Base Pointer)
