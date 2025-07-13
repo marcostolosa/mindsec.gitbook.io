@@ -4,7 +4,7 @@ description: Reversing Challenge - Very Easy
 
 # Behind the Scenes
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ## 🏆 HACKTHEBOX - BEHINDTHESCENES WRITEUP COMPLETO
 
@@ -735,7 +735,7 @@ python3 -c "print('Itz' + '_0n' + 'Ly_' + 'UD2')"
 
 #### **📊 FASE 1: RECONNAISSANCE - "SNIFFING THE TARGET"**
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>file behindthescenes</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>file behindthescenes</p></figcaption></figure>
 
 {% code overflow="wrap" %}
 ```bash
@@ -755,17 +755,17 @@ $ ./behindthescenes test
 ```
 {% endcode %}
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>strings behindthescenes</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>strings behindthescenes</p></figcaption></figure>
 
 **🧠 Red Flag Mental:** _"Programa que não dá erro nem feedback? Isso é alguma proteção, parceiro!"_
 
 #### **🔍 FASE 2: INTELLIGENCE GATHERING - "WHAT'S YOUR GAME?"**
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Ghidra time!** Jogando o binário no Ghidra, primeira coisa que vejo:
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 // Main function decompilada
@@ -777,7 +777,7 @@ pcVar1 = (code *)invalidInstructionException(); // ← BINGO!
 
 #### **🧠 FASE 3: PATTERN RECOGNITION - "I SEE YOU"**
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```c
 void sigill_handler(context) {
