@@ -2,7 +2,7 @@
 icon: layer-group
 ---
 
-# Pilha (Stack Frames)
+# Pilha (Stack)
 
 ## Stack — Anatomia, Exploração e Defesa (x86/x64)
 
@@ -47,17 +47,17 @@ Stack Frame (Pilha) nada mais é do que partes da memória separadas pra cada fu
 
 ```
               ↑ Endereços altos
-┌─────────────┐  ← RBP (Base Pointer)
+┌────────-─────┐  ← RBP (Base Pointer)
 │ Parâmetros  │  (se passados na stack)
-├─────────────┤
+├───────-──────┤
 │ Retorno →   │  endereço para o chamador
-├─────────────┤
+├────────-─────┤
 │ RBP antigo  │  cadeado da stack
-├─────────────┤
+├─────-────────┤
 │ Locais      │  variáveis + canário (se -fstack-protector)
-├─────────────┤
+├─────-────────┤
 │ Alinhamento │  padding p/ 16‑byte
-└─────────────┘  ← RSP (Stack Pointer)
+└──────-───────┘  ← RSP (Stack Pointer)
               ↓ Endereços baixos
 ```
 
