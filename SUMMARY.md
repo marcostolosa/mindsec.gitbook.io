@@ -9,6 +9,7 @@
   * [Registradores](modulo-01/arquitetura-de-computadores/quickstart.md)
   * [Pilha (Stack)](modulo-01/arquitetura-de-computadores/pilha-stack.md)
   * [Calling Conventions](modulo-01/arquitetura-de-computadores/calling-conventions.md)
+  * [Function Return Mechanics](modulo-01/arquitetura-de-computadores/function-return-mechanics.md)
   * [Stack & Heap](modulo-01/arquitetura-de-computadores/stack-and-heap.md)
 
 ***
