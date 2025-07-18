@@ -10,12 +10,36 @@ icon: layer-group
 
 ***
 
-### 1 Conceito e Função
+### 📚 1. A Pilha (The Stack)&#x20;
+
+Quando um _thread_ (linha de execução) está rodando em um processo, ele executa instruções a partir da **Imagem do Programa** (código principal do binário carregado na memória) ou de diversas **DLLs (Dynamic Link Libraries)** – bibliotecas carregadas dinamicamente em tempo de execução.
+
+Para armazenar **dados temporários de curto prazo**, como:
+
+* parâmetros de função (arguments),
+* variáveis locais,
+* endereços de retorno (return addresses) e
+* informações de controle de execução,
+
+...cada _thread_ precisa de uma área própria de memória chamada **pilha (stack)**.
+
+#### 🔄 Como funciona a pilha?
+
+A pilha é organizada na arquitetura x86 usando uma estrutura de dados **LIFO (Last-In, First-Out)** — ou seja, o **último valor inserido é o primeiro a ser removido**.
+
+O processador utiliza instruções específicas em Assembly, como:
+
+* `PUSH` → adiciona (empilha) dados no topo da pilha
+* `POP` → remove (desempilha) dados do topo da pilha
+
+Essas operações são **cruciais em chamadas de função**, onde o endereço de retorno e os argumentos são manipulados diretamente pela pilha.
+
+### 1.1. Conceito e Função
 
 * **Pilha (Stack)** = estrutura LIFO mantida pela CPU/SO para gerenciar chamadas de função.
 * Cria **frames** (blocos) contendo endereço de retorno, registradores salvos, variáveis locais e às vezes argumentos.
 
-### 2 Layout de um Stack Frame (System V AMD64)
+### 2. Layout de um Stack Frame (System V AMD64)
 
 <figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
@@ -24,15 +48,15 @@ Stack Frame (Pilha) nada mais é do que partes da memória separadas pra cada fu
 ```
               ↑ Endereços altos
 ┌─────────────┐  ← RBP (Base Pointer)
-│ Parâmetros │  (se passados na stack)
+│ Parâmetros  │  (se passados na stack)
 ├─────────────┤
-│ Retorno →  │  endereço para o chamador
+│ Retorno →   │  endereço para o chamador
 ├─────────────┤
-│ RBP antigo │  cadeado da stack
+│ RBP antigo  │  cadeado da stack
 ├─────────────┤
-│ Locais     │  variáveis + canário (se -fstack-protector)
+│ Locais      │  variáveis + canário (se -fstack-protector)
 ├─────────────┤
-│ Alinhamento│  padding p/ 16‑byte
+│ Alinhamento │  padding p/ 16‑byte
 └─────────────┘  ← RSP (Stack Pointer)
               ↓ Endereços baixos
 ```
@@ -47,7 +71,7 @@ sub    rsp, 0x50    ; reserva locais
 
 **Epilogo:** `leave` (= mov rsp, rbp; pop rbp) → `ret`.
 
-### 3 Escalonamento de Parâmetros
+### 3. Escalonamento de Parâmetros
 
 | ABI           | 1º–4º argumentos        | Demais | Retorno |
 | ------------- | ----------------------- | ------ | ------- |
@@ -55,7 +79,7 @@ sub    rsp, 0x50    ; reserva locais
 | Microsoft x64 | RCX RDX R8 R9           | stack  | RAX     |
 | x86 (cdecl)   | stack (último→primeiro) | —      | EAX     |
 
-### 4 Exploração Clássica
+### 4. Exploração Clássica
 
 #### 4.1 Buffer Overflow (Stack Smashing)
 
@@ -72,7 +96,7 @@ sub    rsp, 0x50    ; reserva locais
 
 * Formatação `%p` ou leitura out‑of‑bounds expõe ponteiros → base da stack → calculo de offsets.
 
-### 5 Proteções Modernas
+### 5. Proteções Modernas
 
 | Defesa                 | Mecanismo                                     | Bypass comum                |
 | ---------------------- | --------------------------------------------- | --------------------------- |
@@ -81,7 +105,7 @@ sub    rsp, 0x50    ; reserva locais
 | **ASLR**               | random base stack                             | stack‑leak ou brute‑force   |
 | **Shadow Stack (CET)** | cópia RO de RETs                              | JOP / SROP                  |
 
-### 6 Ferramentas e Comandos Essenciais
+### 6. Ferramentas e Comandos Essenciais
 
 | Ferramenta                    | Comando               | Resultado          |
 | ----------------------------- | --------------------- | ------------------ |
@@ -90,7 +114,7 @@ sub    rsp, 0x50    ; reserva locais
 | **x64dbg**                    | CPU ‣ -> Stack window | visual interativo  |
 | **Valgrind/AddressSanitizer** | crash log             | offset exato       |
 
-### 7 Lab Hands‑on (5 Passos)
+### 7. Lab Hands‑on (5 Passos)
 
 1. Compilar `vuln.c` com `-fno-stack-protector -z execstack`.
 2. `gdb ./vuln` → break no `gets`.
@@ -98,14 +122,14 @@ sub    rsp, 0x50    ; reserva locais
 4. Calcular offset (`pwntools.cyclic`).
 5. Injetar shellcode ou ROP.
 
-### 8 Checklist de Maestria
+### 8. Checklist de Maestria
 
 * [ ] Desenhar frame contendo canary.
 * [ ] Identificar gadget `leave; ret` num binário.
 * [ ] Explicar por que alinhamento de 16 B é obrigatório antes de `call` SysV.
 * [ ] Demonstrar leak de `RBP` via `%p`.
 
-### 9 Links Oficiais
+### 9. Links Oficiais
 
 1. **Intel® 64 Manual**, Vol. 1 §6 (Stack Operations)
 2. **SysV ABI AMD64**, §3.2.2 (Process Stack)
