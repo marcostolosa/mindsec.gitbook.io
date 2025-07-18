@@ -7,7 +7,7 @@
 * [Arquitetura de Computadores](modulo-01/arquitetura-de-computadores/README.md)
   * [Memória](modulo-01/arquitetura-de-computadores/memoria.md)
   * [Registradores](modulo-01/arquitetura-de-computadores/quickstart.md)
-  * [Pilha (Stack Frames)](modulo-01/arquitetura-de-computadores/publish-your-docs.md)
+  * [Pilha (Stack)](modulo-01/arquitetura-de-computadores/publish-your-docs.md)
   * [Stack & Heap](modulo-01/arquitetura-de-computadores/stack-and-heap.md)
 
 ***
