@@ -8,6 +8,7 @@
   * [Memória](modulo-01/arquitetura-de-computadores/memoria.md)
   * [Registradores](modulo-01/arquitetura-de-computadores/quickstart.md)
   * [Pilha (Stack)](modulo-01/arquitetura-de-computadores/publish-your-docs.md)
+  * [Calling Conventions](modulo-01/arquitetura-de-computadores/calling-conventions.md)
   * [Stack & Heap](modulo-01/arquitetura-de-computadores/stack-and-heap.md)
 
 ***
