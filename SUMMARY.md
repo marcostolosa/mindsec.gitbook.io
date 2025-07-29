@@ -7,10 +7,10 @@
 * [Arquitetura de Computadores](modulo-01/arquitetura-de-computadores/README.md)
   * [Memória](modulo-01/arquitetura-de-computadores/memoria.md)
   * [Registradores](modulo-01/arquitetura-de-computadores/quickstart.md)
-  * [Pilha (Stack)](modulo-01/arquitetura-de-computadores/pilha-stack.md)
+  * [Pilha (Stack)](modulo-01/arquitetura-de-computadores/pilha-stack/README.md)
+    * [Stack & Heap](modulo-01/arquitetura-de-computadores/pilha-stack/stack-and-heap.md)
   * [Calling Conventions](modulo-01/arquitetura-de-computadores/calling-conventions.md)
   * [Function Return Mechanics](modulo-01/arquitetura-de-computadores/function-return-mechanics.md)
-  * [Stack & Heap](modulo-01/arquitetura-de-computadores/stack-and-heap.md)
 
 ***
 
@@ -43,6 +43,7 @@
   * [Buffer Overflow](modulo-03/vulnerabilidades/buffer-overflow.md)
   * [use-after-free](modulo-03/vulnerabilidades/use-after-free.md)
   * [Race Conditions](modulo-03/vulnerabilidades/race-conditions.md)
+  * [Integer Overflow](modulo-03/vulnerabilidades/integer-overflow.md)
 * [Explorações](modulo-03/exploracoes/README.md)
   * [Desenvolvimento de Exploits](modulo-03/exploracoes/desenvolvimento-de-exploits.md)
   * [Bypass de proteções](modulo-03/exploracoes/bypass-de-protecoes.md)
@@ -64,3 +65,7 @@
     * [Behind the Scenes](exercicios/htb/reversing/behind-the-scenes.md)
 * [Pentest](exercicios/pentest.md)
 * [Reversing](exercicios/reversing.md)
+
+## Hacking
+
+* [Reverse Shell Cheatsheet](hacking/reverse-shell-cheatsheet.md)
