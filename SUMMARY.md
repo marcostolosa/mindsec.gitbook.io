@@ -69,3 +69,4 @@
 ## Hacking
 
 * [Reverse Shell Cheatsheet](hacking/reverse-shell-cheatsheet.md)
+* [SQL Injection - Authentication Bypass Cheat Sheet](hacking/sql-injection-authentication-bypass-cheat-sheet.md)
