@@ -7,6 +7,8 @@ coverY: 0
 
 # Bem vindos
 
+> ### "A Engenharia Reversa acontece a partir do momento em que você acha o trecho do código que quer alterar..."
+
 ### 🧩 **O que você está prestes a desbloquear?**
 
 Imagine poder **abrir qualquer programa**, mesmo sem ter o código-fonte, e entender **exatamente o que ele faz**.\
