@@ -63,8 +63,13 @@
     * [Exatlon](exercicios/htb/challenges/exatlon.md)
   * [Reversing](exercicios/htb/reversing/README.md)
     * [Behind the Scenes](exercicios/htb/reversing/behind-the-scenes.md)
+* [THM](exercicios/thm/README.md)
+  * [ToolsRus](exercicios/thm/toolsrus.md)
 * [Pentest](exercicios/pentest.md)
-* [Reversing](exercicios/reversing.md)
+* [Reversing](exercicios/reversing/README.md)
+  * [rahash2](exercicios/reversing/rahash2.md)
+  * [rax2](exercicios/reversing/rax2.md)
+  * [rabin2](exercicios/reversing/rabin2.md)
 
 ## Hacking
 
