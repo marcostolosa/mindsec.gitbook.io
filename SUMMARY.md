@@ -70,6 +70,7 @@
   * [rahash2](exercicios/reversing/rahash2.md)
   * [rax2](exercicios/reversing/rax2.md)
   * [rabin2](exercicios/reversing/rabin2.md)
+* [Linux](exercicios/linux.md)
 
 ## Hacking
 
