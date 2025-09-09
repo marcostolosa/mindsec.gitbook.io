@@ -28,8 +28,8 @@
   * [pwntools](ferramentas-essenciais/pwntools.md)
   * [GDB Tools](ferramentas-essenciais/gdb-tools/README.md)
     * [pwndbg](ferramentas-essenciais/gdb-tools/pwndbg.md)
-    * [Peda](ferramentas-essenciais/gdb-tools/peda.md)
     * [GEF](ferramentas-essenciais/gdb-tools/gef.md)
+    * [Peda](ferramentas-essenciais/gdb-tools/peda.md)
 
 ## Módulo 02
 
