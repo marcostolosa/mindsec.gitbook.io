@@ -43,12 +43,12 @@ _(Fundação absoluta para todo exploit e engenharia reversa)_
 
 ```
 Endereços altos ↓
-┌───────────────────────────┐
+┌─────────────────────────────┐
 │ Args da função            │
 │ Endereço de retorno ← alvo│
 │ RBP anterior              │
 │ Variáveis locais          │
-└───────────────────────────┘
+└─────────────────────────────┘
 Endereços baixos ↑
 ```
 
@@ -228,7 +228,7 @@ _Lab rápido_: compile `gcc -fasynchronous-unwind-tables -S hello.c` e abra o `.
 ### 5 Checkpoint de Aprendizagem
 
 * [ ] Desenhei à mão um diagrama completo stack/heap/segments.
-* [ ] Pausar um programa no GDB/x64dbg e localizar `RIP`.
+* [x] Pausar um programa no GDB/x64dbg e localizar `RIP`.
 * [ ] Explicar a diferença entre modo usuário e modo kernel em ≤ 60 s.
 * [ ] Converter pseudo‑código simples em assembly mentalmente.
 
