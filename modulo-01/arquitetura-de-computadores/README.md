@@ -43,12 +43,12 @@ _(Fundação absoluta para todo exploit e engenharia reversa)_
 
 ```
 Endereços altos ↓
-┌─────────────────────────────┐
+┌──────────────────────────────┐
 │ Args da função            │
 │ Endereço de retorno ← alvo│
 │ RBP anterior              │
 │ Variáveis locais          │
-└─────────────────────────────┘
+└──────────────────────────────┘
 Endereços baixos ↑
 ```
 
