@@ -22,6 +22,9 @@
   * [Instruções e Práticas](assembly/instrucoes-e-praticas.md)
 * [Ferramentas Essenciais](ferramentas-essenciais/README.md)
   * [Radare2](ferramentas-essenciais/radare2/README.md)
+    * [rabin2](ferramentas-essenciais/radare2/rabin2.md)
+    * [rahash2](ferramentas-essenciais/radare2/rahash2.md)
+    * [rax2](ferramentas-essenciais/radare2/rax2.md)
     * [iaito (radare2 GUI)](ferramentas-essenciais/radare2/iaito-radare2-gui.md)
   * [Ghidra](ferramentas-essenciais/ghidra.md)
   * [x32dbg | x64dbg](ferramentas-essenciais/x32dbg-or-x64dbg.md)
@@ -44,6 +47,7 @@
   * [use-after-free](modulo-03/vulnerabilidades/use-after-free.md)
   * [Race Conditions](modulo-03/vulnerabilidades/race-conditions.md)
   * [Integer Overflow](modulo-03/vulnerabilidades/integer-overflow.md)
+  * [Format String](modulo-03/vulnerabilidades/format-string.md)
 * [Explorações](modulo-03/exploracoes/README.md)
   * [Desenvolvimento de Exploits](modulo-03/exploracoes/desenvolvimento-de-exploits.md)
   * [Bypass de proteções](modulo-03/exploracoes/bypass-de-protecoes.md)
@@ -66,10 +70,6 @@
 * [THM](exercicios/thm/README.md)
   * [ToolsRus](exercicios/thm/toolsrus.md)
 * [Pentest](exercicios/pentest.md)
-* [Reversing](exercicios/reversing/README.md)
-  * [rahash2](exercicios/reversing/rahash2.md)
-  * [rax2](exercicios/reversing/rax2.md)
-  * [rabin2](exercicios/reversing/rabin2.md)
 * [Linux](exercicios/linux/README.md)
   * [Bash Pitfalls](exercicios/linux/bash-pitfalls.md)
 
@@ -77,4 +77,3 @@
 
 * [Reverse Shell Cheatsheet](hacking/reverse-shell-cheatsheet.md)
 * [SQL Injection - Authentication Bypass Cheat Sheet](hacking/sql-injection-authentication-bypass-cheat-sheet.md)
-* [Format String Bug](hacking/format-string-bug.md)
