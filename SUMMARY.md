@@ -67,6 +67,8 @@
     * [Exatlon](exercicios/htb/challenges/exatlon.md)
   * [Reversing](exercicios/htb/reversing/README.md)
     * [Behind the Scenes](exercicios/htb/reversing/behind-the-scenes.md)
+  * [CTF](exercicios/htb/ctf/README.md)
+    * [FlagCasino](exercicios/htb/ctf/flagcasino.md)
 * [THM](exercicios/thm/README.md)
   * [ToolsRus](exercicios/thm/toolsrus.md)
 * [Pentest](exercicios/pentest.md)
