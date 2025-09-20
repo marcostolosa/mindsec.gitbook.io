@@ -20,6 +20,7 @@
 * [Assembly](assembly/README.md)
   * [Sintaxe](assembly/sintaxe.md)
   * [Instruções e Práticas](assembly/instrucoes-e-praticas.md)
+* [C / C++](c-c++.md)
 * [Ferramentas Essenciais](ferramentas-essenciais/README.md)
   * [Radare2](ferramentas-essenciais/radare2/README.md)
     * [rabin2](ferramentas-essenciais/radare2/rabin2.md)
