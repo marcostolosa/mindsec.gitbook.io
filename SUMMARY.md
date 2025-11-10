@@ -83,3 +83,4 @@
 * [AI Red Team](cheatsheets/ai-red-team.md)
 * [Villager-ng](cheatsheets/villager-ng.md)
 * [XSS](cheatsheets/xss.md)
+* [Bug Bounty](cheatsheets/bug-bounty.md)
