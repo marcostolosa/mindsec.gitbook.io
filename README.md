@@ -9,10 +9,12 @@ coverY: 0
 
 > ### "A Engenharia Reversa acontece a partir do momento em que você acha o trecho do código que quer alterar..."
 
-### 🧩 **O que você está prestes a desbloquear?**
+### **O que você está prestes a desbloquear?**
 
-Imagine poder **abrir qualquer programa**, mesmo sem ter o código-fonte, e entender **exatamente o que ele faz**.\
+Imagine poder **abrir qualquer programa**, mesmo sem ter o código-fonte, e entender **exatamente o que ele faz**.
+
 Agora imagine ir além: **descobrir falhas**, **criar exploits**, e até **modificar o comportamento** do software/programa como se fosse seu.
 
-Isso é **engenharia reversa!** :tada:\
+Isso é **engenharia reversa!** :tada:
+
 E este é o **Gibook definitivo** para dominar essa arte — do zero ao avançado — de forma **visual, prática e irresistivelmente didática**.
