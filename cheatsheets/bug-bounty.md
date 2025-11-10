@@ -1,6 +1,6 @@
 # Bug Bounty
 
-## Bug Bounty: Segredos dos Pros - Golden Window Strategy
+## Golden Window Strategy
 
 > **Data:** 2025-11-10\
 > **Status:** 🔥 OPERACIONAL\
