@@ -76,10 +76,10 @@
 * [Linux](exercicios/linux/README.md)
   * [Bash Pitfalls](exercicios/linux/bash-pitfalls.md)
 
-## Hacking
+## Cheatsheets
 
-* [Reverse Shell Cheatsheet](hacking/reverse-shell-cheatsheet.md)
-* [SQL Injection - Authentication Bypass Cheat Sheet](hacking/sql-injection-authentication-bypass-cheat-sheet.md)
-* [AI Red Team](hacking/ai-red-team.md)
-* [Villager-ng](hacking/villager-ng.md)
-* [XSS](hacking/xss.md)
+* [Reverse Shell Cheatsheet](cheatsheets/reverse-shell-cheatsheet.md)
+* [SQL Injection - Authentication Bypass Cheat Sheet](cheatsheets/sql-injection-authentication-bypass-cheat-sheet.md)
+* [AI Red Team](cheatsheets/ai-red-team.md)
+* [Villager-ng](cheatsheets/villager-ng.md)
+* [XSS](cheatsheets/xss.md)
