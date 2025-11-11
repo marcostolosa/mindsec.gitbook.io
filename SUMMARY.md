@@ -70,6 +70,8 @@
     * [Behind the Scenes](exercicios/htb/reversing/behind-the-scenes.md)
   * [CTF](exercicios/htb/ctf/README.md)
     * [FlagCasino](exercicios/htb/ctf/flagcasino.md)
+  * [Machines](exercicios/htb/machines/README.md)
+    * [Expressway](exercicios/htb/machines/expressway.md)
 * [THM](exercicios/thm/README.md)
   * [ToolsRus](exercicios/thm/toolsrus.md)
 * [Pentest](exercicios/pentest.md)
