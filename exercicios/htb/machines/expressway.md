@@ -44,10 +44,9 @@ nmap -sU 10.10.11.87 --top-ports 50
 
 ### 2.3 Pesquisa e decisão de ferramenta
 
-*
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-    <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
-* Pesquisa “500/udp ipsec ike pentesting” ou “IKE aggressive mode PSK crack” leva a artigos como: ([ERNW - PSK Attack](https://ernw.de/download/pskattack.pdf))
+* Pesquisa “500/udp ipsec ike pentesting” ou “IKE aggressive mode PSK crack” leva a artigos como: ([ERNW - PSK Attack](https://ernw.de/download/pskattack.pdf) e [IPSec / IKE VPN - Port 500/udp](https://www.verylazytech.com/network-pentesting/ipsec-ike-vpn-port-500-udp))
 
 <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
