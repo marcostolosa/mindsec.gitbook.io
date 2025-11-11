@@ -108,6 +108,10 @@ ssh ike@expressway.htb
 
 ## 4. Escalada de privilégios
 
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
+Após acessar a maquina via ssh, rodamos o script de enumeração mais conhecido e usado em CTFs, em sua versão para linux: [linpeas.sh](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS).
+
 <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
