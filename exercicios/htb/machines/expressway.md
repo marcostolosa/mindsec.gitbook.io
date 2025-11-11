@@ -67,7 +67,7 @@ ike-scan -A --pskcrack=hash.txt 10.10.11.87
 *
 
     <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-* Saída mostra: “Aggressive Mode Handshake returned HDR=…, SA=(Enc=3DES Hash=SHA1 Group=2:modp1024 Auth=PSK …) ID(Type=ID\_USER\_FQDN, Value=[ike@expressway.htb](mailto:ike@expressway.htb)) …” e salva o hash no arquivo.
+* Saída mostra: “Aggressive Mode Handshake returned HDR=…, SA=(Enc=3DES Hash=SHA1 Group=2:modp1024 Auth=PSK …) ID(Type=ID\_USER\_FQDN, Value=ike@expressway.htb) …” e salva o hash no arquivo.
 
 <figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
