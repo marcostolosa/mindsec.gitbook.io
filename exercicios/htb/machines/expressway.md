@@ -10,7 +10,6 @@ description: CTF HackTheBox - Easy
 * DNS: `expressway.htb`
 * **Objetivo:** obter os dois arquivos de flag; `user.txt` (usuário) e `root.txt` (root)
 * **Metodologia:** Reconhecimento → Enumeração → Acesso inicial → Escalada de privilégio → Pós-exploração
-* **Foco de aprendizado:** Entender por que escolhemos cada ferramenta/comando, como conectar uma fase à outra de forma lógica, e não apenas “rodar/chutar comandos”.
 
 ***
 
@@ -64,9 +63,9 @@ ike-scan -A --pskcrack=hash.txt 10.10.11.87
 
 * `-A` = Aggressive mode scan
 * `--pskcrack=hash.txt` = crack da pre-shared key no aggressive mode
-*
 
-    <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
 * Saída mostra: “Aggressive Mode Handshake returned HDR=…, SA=(Enc=3DES Hash=SHA1 Group=2:modp1024 Auth=PSK …) ID(Type=ID\_USER\_FQDN, Value=ike@expressway.htb) …” e salva o hash no arquivo.
 
 <figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
