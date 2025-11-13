@@ -81,6 +81,7 @@
 ## artigos
 
 * [Cloudflare Zero-Trust with Docker](artigos/cloudflare-zero-trust-with-docker.md)
+* [Caçando XSS refletidos](artigos/cacando-xss-refletidos.md)
 
 ## Cheatsheets
 
