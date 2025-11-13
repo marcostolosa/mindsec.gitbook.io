@@ -13,8 +13,6 @@ Aprenda sobre o Cloudflare Zero Tunnel e como utilizá-lo com Docker para expor 
 
 ### Cloudflare Zero Trust Tunnel
 
-Com a crescente migração de empresas para o trabalho remoto e infraestrutura em nuvem, proteger conexões de rede e dados sensíveis tornou-se mais importante do que nunca.
-
 A **Cloudflare** oferece uma ferramenta chamada **Cloudflare Zero Tunnel**, que provê uma conexão segura entre sua máquina local e a rede edge da Cloudflare.
 
 Neste guia, veremos o que é o Cloudflare Zero Trust Tunnel, suas vantagens e como usá-lo junto ao **Docker** para expor serviços de forma segura.
@@ -44,6 +42,8 @@ Aproveita a infraestrutura mundial da Cloudflare para oferecer conexões rápida
 
 **⚡ Desempenho e confiabilidade:**
 
+O uso do protocolo QUIC proporciona conexões mais rápidas e estáveis, garantindo uma experiência fluida e consistente.
+
 ***
 
 ### Implantando o Cloudflare Zero Tunnel com Docker
@@ -56,10 +56,6 @@ Com o **Cloudflare Zero Tunnel**, é possível expor serviços Docker na Interne
 
 Primeiro, crie um container que execute o serviço localmente.\
 Depois, ele será exposto via rede do Cloudflare Tunnel no Docker.
-
-#### Exemplo — Aplicativo Python DASH
-
-O autor descobriu o Cloudflare Tunnel ao buscar uma forma segura de expor seu app Python de planejamento de viagens com previsão do tempo, **sem revelar o IP residencial**.
 
 ### 2. Instalar o cliente Cloudflare Zero Tunnel
 
@@ -167,9 +163,7 @@ No **Cloudflare Dashboard**:
 nome_do_container:porta_docker
 ```
 
-```
 Exemplo:
-```
 
 ```makefile
 dash_app:8050
