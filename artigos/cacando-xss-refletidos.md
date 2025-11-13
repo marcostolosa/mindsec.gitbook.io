@@ -47,7 +47,7 @@ Se você é principiante, esta parte é essencial. Pode ajuda-lo a poupar horas 
 
 ### **Passo 1: Reflexão**
 
-O primeiro passo é identificar onde o seu input é refletido na resposta da aplicação. Insira uma string única (como `1337test`) em vários campos de input, parâmetros de URL, cabeçalhos ou qualquer outro ponto de dados controlável pelo utilizador.
+O primeiro passo é identificar onde o seu input é refletido na resposta da aplicação. Insira uma string única (como `intigritti337test`) em vários campos de input, parâmetros de URL, cabeçalhos ou qualquer outro ponto de dados controlável pelo utilizador.
 
 Em seguida, procure essa string na resposta HTTP. Isto ajuda-lo a mapear todos os pontos de reflexão e entender onde o seu input acaba — o que é crucial para determinar se a exploração é possível e que tipo de injeção se está a tratar.
 
@@ -59,7 +59,7 @@ Em seguida, procure essa string na resposta HTTP. Isto ajuda-lo a mapear todos o
 
 ### **Passo 2: Injeção**
 
-Uma vez encontrado um ponto de reflexão, teste se consegue “sair” do contexto atual injetando uma simples tag HTML como `<s>1337test` e observar como a aplicação a lida.
+Uma vez encontrado um ponto de reflexão, teste se consegue “sair” do contexto atual injetando uma simples tag HTML como `<s>intigritti1337test` e observar como a aplicação a lida.
 
 Para reflexões em contexto JavaScript (qualquer coisa dentro de `<script>`), a string de injeção será ligeiramente diferente — será discutido mais em detalhe abaixo.
 
