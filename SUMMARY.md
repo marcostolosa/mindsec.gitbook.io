@@ -78,6 +78,10 @@
 * [Linux](exercicios/linux/README.md)
   * [Bash Pitfalls](exercicios/linux/bash-pitfalls.md)
 
+## artigos
+
+* [Cloudflare Zero-Trust with Docker](artigos/cloudflare-zero-trust-with-docker.md)
+
 ## Cheatsheets
 
 * [Reverse Shell Cheatsheet](cheatsheets/reverse-shell-cheatsheet.md)
