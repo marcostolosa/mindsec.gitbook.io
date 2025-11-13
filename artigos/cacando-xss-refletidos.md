@@ -1,5 +1,6 @@
 ---
 description: '[pt-br] Hunting for reflected XSS vulnerabilities: A complete guide'
+icon: bug
 ---
 
 # Caçando XSS refletidos
