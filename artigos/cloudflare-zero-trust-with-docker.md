@@ -52,20 +52,16 @@ O **Docker** é uma plataforma popular para empacotar e executar aplicações em
 
 Com o **Cloudflare Zero Tunnel**, é possível expor serviços Docker na Internet de forma segura e **sem precisar abrir portas no roteador**.
 
-#### 1. Criar um container Docker para seu serviço
+### 1. Criar um container Docker para seu serviço
 
 Primeiro, crie um container que execute o serviço localmente.\
 Depois, ele será exposto via rede do Cloudflare Tunnel no Docker.
-
-***
 
 #### Exemplo — Aplicativo Python DASH
 
 O autor descobriu o Cloudflare Tunnel ao buscar uma forma segura de expor seu app Python de planejamento de viagens com previsão do tempo, **sem revelar o IP residencial**.
 
-***
-
-### 1. Instalar o cliente Cloudflare Zero Tunnel
+### 2. Instalar o cliente Cloudflare Zero Tunnel
 
 Instale o cliente **`cloudflared`** na máquina local e configure-o para autenticar com sua conta Cloudflare.
 
@@ -79,7 +75,7 @@ Na dashboard da Cloudflare:
 
 ![Navigating Dash Cloudflare interface](https://fossengineer.com/img/SelfHosting/Docker-dash-Cloudflare.png)
 
-### 2. Executar o container do Cloudflare Tunnel
+### 3. Executar o container do Cloudflare Tunnel
 
 #### Usando CLI:
 
@@ -123,7 +119,7 @@ docker-compose up -d
 
 Isso criará um container chamado `cloudflared` e uma rede Docker chamada `tunnel`, que será usada para conectar os outros containers que você quiser expor.
 
-### 3. Adicionar serviços à rede do Cloudflare Tunnel
+### 4. Adicionar serviços à rede do Cloudflare Tunnel
 
 Com o container `cloudflared` ativo, conecte outros containers Docker à mesma rede:
 
@@ -158,7 +154,7 @@ networks:
 
 ***
 
-### 4. Configurar o hostname público via UI da Cloudflare
+### 5. Configurar o hostname público via UI da Cloudflare
 
 No **Cloudflare Dashboard**:
 
@@ -183,7 +179,7 @@ Assim, o tráfego para `https://subdominio.seudominio.com` será roteado até o 
 
 ***
 
-### 5. Acessar o serviço
+### 6. Acessar o serviço
 
 Pronto! Seu serviço agora está acessível com segurança via a rede edge da Cloudflare.\
 Você pode acessá-lo de qualquer lugar do mundo, com conexão rápida e protegida.
