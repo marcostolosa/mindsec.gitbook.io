@@ -72,6 +72,7 @@
     * [FlagCasino](exercicios/htb/ctf/flagcasino.md)
   * [Machines](exercicios/htb/machines/README.md)
     * [Expressway](exercicios/htb/machines/expressway.md)
+    * [Eighteen](exercicios/htb/machines/eighteen.md)
 * [THM](exercicios/thm/README.md)
   * [ToolsRus](exercicios/thm/toolsrus.md)
 * [Pentest](exercicios/pentest.md)
