@@ -90,6 +90,8 @@
 
 ## Cheatsheets
 
+* [Tools](cheatsheets/tools/README.md)
+  * [Rustscan](cheatsheets/tools/rustscan.md)
 * [Reverse Shell Cheatsheet](cheatsheets/reverse-shell-cheatsheet.md)
 * [SQL Injection - Authentication Bypass Cheat Sheet](cheatsheets/sql-injection-authentication-bypass-cheat-sheet.md)
 * [AI Red Team](cheatsheets/ai-red-team.md)
