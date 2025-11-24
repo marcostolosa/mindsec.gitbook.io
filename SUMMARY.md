@@ -99,3 +99,7 @@
 * [Villager-ng](cheatsheets/villager-ng.md)
 * [XSS](cheatsheets/xss.md)
 * [Bug Bounty](cheatsheets/bug-bounty.md)
+
+***
+
+* [Web Fuzzing](web-fuzzing.md)
