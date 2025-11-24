@@ -152,7 +152,6 @@ Aqui está exatamente como eu estruturaria essa página no seu GitBook para fica
 
 Antes de rodar ferramentas, entenda onde você está no mapa:
 
-````mermaid
 ```mermaid
 graph TD
     A[Alvo Inicial] --> B{Tipo de Escopo?}
@@ -173,7 +172,6 @@ graph TD
     F --> F1[API Endpoints]
     F --> F2[Backup/Config Files]
 ```
-````
 
 ***
 
