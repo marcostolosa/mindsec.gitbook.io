@@ -140,14 +140,6 @@ Se estiver sendo bloqueado (403) em tudo, tente reduzir a velocidade (`-p 0.1` -
 
 ***
 
-Essa é a pergunta certa. A diferença entre um "bom" pentester e um "top tier" (como Jason Haddix, NahamSec ou Orange Tsai) não é apenas saber o comando, mas como eles organizam o fluxo de pensamento (o Mindmap) e os detalhes que evitam o desperdício de tempo.
-
-Se os melhores do mundo estivessem montando esse GitBook, ele não seria apenas uma lista de comandos; seria um Workflow de Ataque.
-
-Aqui está exatamente como eu estruturaria essa página no seu GitBook para ficar nível "World Class", incluindo os comandos aprimorados e as seções estratégicas.
-
-***
-
 ### The Mindmap (Fluxo de Pensamento)
 
 Antes de rodar ferramentas, entenda onde você está no mapa:
@@ -175,9 +167,7 @@ graph TD
 
 ***
 
-### The "Haddix" Cheat Sheet (Comandos Aprimorados)
-
-Os comandos abaixo são versões "tunadas" dos seus, adicionando flags que profissionais usam para evitar falsos positivos e acelerar o processo.
+### The Cheat Sheet (Comandos Aprimorados)
 
 #### 1. VHost Discovery (O "Caçador de Subdomínios Ocultos")
 
@@ -238,7 +228,7 @@ Pro Tips:
 
 Os profissionais estão migrando para as wordlists da Assetnote. Elas são geradas analisando toda a internet mensalmente. São mais atuais e geram menos lixo.
 
-* _Link para o GitBook:_ `https://wordlists.assetnote.io/`
+* _Link:_ `https://wordlists.assetnote.io/`
 
 #### 2. A "Golden Extension" List
 
@@ -247,7 +237,7 @@ Nunca faça fuzzing cego de extensões. Use esta lista baseada na tecnologia do 
 * PHP/Apache: `.php`, `.php.bak`, `.php.old`, `.htaccess`, `.txt`
 * IIS/ASP: `.asp`, `.aspx`, `.config`, `.bak`
 * Node/Python: `.json`, `.yml`, `.js`
-* Geral (Sempre use): `.zip`, `.tar.gz`, `.sql` (Backups de banco de dados são Game Over imediato).
+* Geral (Sempre use): `.zip`, `.tar.gz`, `.sql` (Backups de banco de dados).
 
 #### 3. Fuzzing de API é diferente
 
