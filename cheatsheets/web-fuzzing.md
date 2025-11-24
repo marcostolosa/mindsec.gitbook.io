@@ -98,8 +98,6 @@ python api_fuzzer.py http://83.136.251.11:53977
 
 ### Pro Insights & Dicas de Mercado
 
-O que diferencia um iniciante de um profissional sênior no Web Fuzzing:
-
 #### 1. Use as Wordlists da Assetnote
 
 Embora a `SecLists` seja o padrão clássico, as wordlists da [Assetnote](https://wordlists.assetnote.io/) são geradas estatisticamente a partir de scans massivos da internet. Elas são mais eficientes e modernas ("High signal, low noise").
@@ -174,7 +172,6 @@ graph TD
 Muitos servidores respondem com 200 OK para qualquer coisa. O segredo aqui é o filtro.
 
 ```shellscript
-# Versão Pro do seu comando
 ffuf -u http://NODE_IP:PORT/ -H "Host: FUZZ.fuzzing_fun.htb" \
      -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt \
      -c -ac -mc 200,301,302,403 -fs 0

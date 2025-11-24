@@ -93,13 +93,10 @@
 * [Tools](cheatsheets/tools/README.md)
   * [Rustscan](cheatsheets/tools/rustscan.md)
   * [NetExec (NXC)](cheatsheets/tools/netexec-nxc.md)
+* [Web Fuzzing](cheatsheets/web-fuzzing.md)
 * [Reverse Shell Cheatsheet](cheatsheets/reverse-shell-cheatsheet.md)
 * [SQL Injection - Authentication Bypass Cheat Sheet](cheatsheets/sql-injection-authentication-bypass-cheat-sheet.md)
 * [AI Red Team](cheatsheets/ai-red-team.md)
 * [Villager-ng](cheatsheets/villager-ng.md)
 * [XSS](cheatsheets/xss.md)
 * [Bug Bounty](cheatsheets/bug-bounty.md)
-
-***
-
-* [Web Fuzzing](web-fuzzing.md)
