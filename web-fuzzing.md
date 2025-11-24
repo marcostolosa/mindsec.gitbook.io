@@ -154,23 +154,23 @@ Antes de rodar ferramentas, entenda onde você está no mapa:
 
 ```mermaid
 graph TD
-    A[Alvo Inicial] --> B{Tipo de Escopo?}
-    B -->|Wildcard *.site.com| C[Subdomain & VHost Discovery]
-    B -->|URL Única| D[Content Discovery]
+  A[Alvo Inicial] --> B{Tipo de Escopo}
+  B -->|Wildcard *.site.com| C[Subdomain & VHost Discovery]
+  B -->|URL Única| D[Content Discovery]
+
+  C --> C1[DNS Brute-Force]
+  C --> C2[VHost Fuzzing]
+
+  D --> D1[Arquivos & Diretórios]
+  D1 --> D2[Recursão Inteligente]
+
+  D --> E[Parameter Fuzzing]
+  E --> E1[GET/POST Params]
+  E --> E2[Header Fuzzing]
     
-    C --> C1[DNS Bruteforce]
-    C --> C2[VHost Fuzzing]
-    
-    D --> D1[Arquivos & Diretórios]
-    D1 --> D2[Recursão Inteligente]
-    
-    D --> E[Parameter Fuzzing]
-    E --> E1[GET/POST Params]
-    E --> E2[Header Fuzzing]
-    
-    D --> F[Tech-Specific Fuzzing]
-    F --> F1[API Endpoints]
-    F --> F2[Backup/Config Files]
+  D --> F[Tech-Specific Fuzzing]
+  F --> F1[API Endpoints]
+  F --> F2[Backup/Config Files]
 ```
 
 ***
