@@ -98,5 +98,6 @@
 * [SQL Injection - Authentication Bypass Cheat Sheet](cheatsheets/sql-injection-authentication-bypass-cheat-sheet.md)
 * [AI Red Team](cheatsheets/ai-red-team.md)
 * [Villager-ng](cheatsheets/villager-ng.md)
+* [XSS Payloads](cheatsheets/xss-payloads.md)
 * [XSS](cheatsheets/xss.md)
 * [Bug Bounty](cheatsheets/bug-bounty.md)
